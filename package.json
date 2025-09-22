@@ -1,0 +1,12 @@
+{
+  "name": "ad320jest",
+  "version": "1.0.0",
+  "description": "## **Learning Goals**",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
