@@ -35,7 +35,7 @@ When a unit test fails, you can follow the test directly to the malfunctioning c
 
 ### Test Structure
 
-Unit tests are usually organized into:
+Tests are usually organized into:
 
 - **Test suites** – Groups of related tests.
 - **Test cases** – Individual checks within a suite. Each case covers one specific scenario.  
@@ -49,6 +49,9 @@ When writing unit tests, you typically check:
 - **Edge cases** – Unusual inputs or situations that might break your code.
 
 _Example:_ For a calculator’s `divide` function, you’d test normal division (like `divide(10, 2)` equals `5`) and also the edge case of dividing by zero to confirm the code handles it safely.
+
+Edge cases may seem unimportant because they’re rare, but remember:  
+if something happens only **0.1% of the time** and you have **5 million users**, that still means **thousands of people** will encounter the issue.
 
 ## Jest
 
