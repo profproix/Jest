@@ -32,7 +32,6 @@ They help you verify that each function or module behaves as intended, which is 
 
 When a unit test fails, you can follow the test directly to the malfunctioning code to identify and fix the issue, or follow a trail of erros to the source.
 
-
 ### Test Structure
 
 Tests are usually organized into:
@@ -74,11 +73,11 @@ Find more here at the JEST docs
 [JEST](https://jestjs.io/docs/getting-started)
 
 ```
-describe("description of the suit", () => {
-  test("description of the case", () => {
-    //assertions
+  describe("description of the suit", () => {
+    test("description of the case", () => {
+      //assertions
+    });
   });
-});
 ```
 
 ## Deliverables
@@ -123,17 +122,17 @@ describe("description of the suit", () => {
 - Verify by running your tests with `npm run test`
   <details>
     <summary>Click Here to view solution</summary>
-    ```
-    describe("add", () => {
-      test("adds two positive numbers", () => {
-        expect(add(20, 5)).toBe(25);
-      });
-    });
 
-  ```
+      ```
+          describe("add", () => {
+            test("adds two positive numbers", () => {
+              expect(add(20, 5)).toBe(25);
+            });
+          });
+
+      ```
+
   </details>
-
-  ```
 
 ### 4. Add more test cases
 
@@ -144,21 +143,21 @@ describe("description of the suit", () => {
   <details>
     <summary>Click Here to view solution</summary>
 
-```
-      describe("add", () => {
-        test("adds two positive numbers", () => {
-          expect(add(20, 5)).toBe(25);
-        });
-
-        test("adds a negative and a positive number", () => {
-          expect(add(-4, 7)).toBe(3);
+  ```
+        describe("add", () => {
+          test("adds two positive numbers", () => {
+            expect(add(20, 5)).toBe(25);
           });
 
-        test("adds zero to a positive number", () => {
-          expect(add(0, 12)).toBe(12);
-        });
+          test("adds a negative and a positive number", () => {
+            expect(add(-4, 7)).toBe(3);
+            });
 
-```
+          test("adds zero to a positive number", () => {
+            expect(add(0, 12)).toBe(12);
+          });
+
+  ```
 
   </details>
 
@@ -169,71 +168,71 @@ describe("description of the suit", () => {
   <details>
   <summary>Click Here to view solution</summary>
 
-```
-    // subtract
-    describe("subtract", () => {
-      test("subtracts a smaller number from a larger one", () => {
-        expect(subtract(15, 6)).toBe(9);
+  ```
+      // subtract
+      describe("subtract", () => {
+        test("subtracts a smaller number from a larger one", () => {
+          expect(subtract(15, 6)).toBe(9);
+        });
+
+        test("subtracts a negative number from a positive", () => {
+          expect(subtract(10, -5)).toBe(15);
+        });
       });
 
-      test("subtracts a negative number from a positive", () => {
-        expect(subtract(10, -5)).toBe(15);
-      });
-    });
+      // multiply
+      describe("multiply", () => {
+        test("multiplies two positive numbers", () => {
+          expect(multiply(4, 6)).toBe(24);
+        });
 
-    // multiply
-    describe("multiply", () => {
-      test("multiplies two positive numbers", () => {
-        expect(multiply(4, 6)).toBe(24);
-      });
-
-      test("multiplies a negative and a positive number", () => {
-        expect(multiply(-3, 5)).toBe(-15);
-      });
-    });
-
-    // divide
-    describe("divide", () => {
-      test("divides a larger number by a smaller one", () => {
-        expect(divide(20, 4)).toBe(5);
+        test("multiplies a negative and a positive number", () => {
+          expect(multiply(-3, 5)).toBe(-15);
+        });
       });
 
-      test("returns an error when dividing by zero", () => {
-        expect(divide(12, 0)).toBe("Cannot divide by zero");
+      // divide
+      describe("divide", () => {
+        test("divides a larger number by a smaller one", () => {
+          expect(divide(20, 4)).toBe(5);
+        });
+
+        test("returns an error when dividing by zero", () => {
+          expect(divide(12, 0)).toBe("Cannot divide by zero");
+        });
+
+        test("divides a negative number by a positive number", () => {
+          expect(divide(-12, 4)).toBe(-3);
+        });
       });
 
-      test("divides a negative number by a positive number", () => {
-        expect(divide(-12, 4)).toBe(-3);
-      });
-    });
+      // calculate
+      describe("calculate", () => {
+        test("handles addition operator", () => {
+          expect(calculate(14, "+", 6)).toBe(20);
+        });
 
-    // calculate
-    describe("calculate", () => {
-      test("handles addition operator", () => {
-        expect(calculate(14, "+", 6)).toBe(20);
+        test("handles subtraction operator", () => {
+          expect(calculate(20, "-", 8)).toBe(12);
+        });
+
+        test("handles multiplication operator", () => {
+          expect(calculate(5, "*", 5)).toBe(25);
+        });
+
+        test("handles division operator", () => {
+          expect(calculate(18, "/", 3)).toBe(6);
+        });
+
+        test("handles divide by zero in calculate", () => {
+          expect(calculate(9, "/", 0)).toBe("Cannot divide by zero");
+        });
+
+        test("returns unknown operator message", () => {
+          expect(calculate(2, "%", 3)).toBe("Unknown operator");
+        });
       });
 
-      test("handles subtraction operator", () => {
-        expect(calculate(20, "-", 8)).toBe(12);
-      });
-
-      test("handles multiplication operator", () => {
-        expect(calculate(5, "*", 5)).toBe(25);
-      });
-
-      test("handles division operator", () => {
-        expect(calculate(18, "/", 3)).toBe(6);
-      });
-
-      test("handles divide by zero in calculate", () => {
-        expect(calculate(9, "/", 0)).toBe("Cannot divide by zero");
-      });
-
-      test("returns unknown operator message", () => {
-        expect(calculate(2, "%", 3)).toBe("Unknown operator");
-      });
-    });
-
-```
+  ```
 
   </details>
