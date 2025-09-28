@@ -17,7 +17,7 @@ With Node comes **npm** (Node Package Manager). This is a tool for installing pa
 
 Packages are essentially collections of code written by other people so you don't have to write everything from scratch. They handle repetitive or common tasks, so you can focus on other development goals.
 
-npm's package repository holds hundreds of thousands of packages—check it out here: [https://www.npmjs.com/](https://www.npmjs.com/)
+npm's package repository holds hundreds of thousands of packages, check it out here: [https://www.npmjs.com/](https://www.npmjs.com/)
 
 ### Install Node
 
