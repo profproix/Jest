@@ -27,9 +27,11 @@ If you don't have Node installed yet, follow the instructions here to install it
 
 ## Understanding Unit Tests
 
-Unit tests are small, focused tests that check one piece of code at a time.  
-They let you verify that each function or module behaves exactly as intended,  
-which is especially useful when you’re trying to track down bugs.
+Unit tests are **small, focused tests** that check one piece of code at a time.  
+They help you verify that each function or module behaves as intended, which is especially useful when you’re tracking down bugs.
+
+When a unit test fails, you can follow the test directly to the malfunctioning code to identify and fix the issue, or follow a trail of erros to the source.
+
 
 ### Test Structure
 
